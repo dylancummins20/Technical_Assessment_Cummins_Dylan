@@ -57,17 +57,17 @@ TeamB_2PTM = int(0)
 for i in range(len(rows)):
     if(i < 280):
         #corner threes first
-        if( ((TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5) >= 22 and TeamA_Y[i] <= 7.8):
+        if( ((TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5) >= 22 and TeamA_Y[i] <= 7.8): #corner thress have to have the Y coordinate less than or equal to 7.8, and the distance has to be greater than 22
             TeamA_C3 = TeamA_C3 + 1
             if(TeamA_fg[i] == 1):
                 TeamA_C3M = TeamA_C3M + 1
         #Non-corner threes
-        elif(TeamA_Y[i] > 7.8 and (( (TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5   ) ) >= 23.75):
+        elif(TeamA_Y[i] > 7.8 and (( (TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5   ) ) >= 23.75): #non-corner threes have to have a Y coordinate greater than 7.8 and distance greater than or equal to 23.75
             TeamA_NC3 = TeamA_NC3 + 1
             if(TeamA_fg[i] == 1):
                 TeamA_NC3M = TeamA_NC3M + 1
         #Two point shots
-        elif( (( (TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5   ) ) < 23.75  and abs(TeamA_X[i] < 22)):
+        elif( (( (TeamA_X[i]**2) + (TeamA_Y[i]**2)**0.5   ) ) < 23.75  and abs(TeamA_X[i] < 22)): #two point shots have to have the absolute value of the x coordinate less than 22 and the distance less than 23.75
             TeamA_2PT = TeamA_2PT + 1
             if(TeamA_fg[i] == 1):
                 TeamA_2PTM = TeamA_2PTM + 1

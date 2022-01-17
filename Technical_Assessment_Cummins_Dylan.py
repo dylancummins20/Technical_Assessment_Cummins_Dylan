@@ -88,9 +88,11 @@ for i in range(len(rows)):
             if(TeamB_fg[i - 280] == 1):
                 TeamB_2PTM = TeamB_2PTM + 1
 
-TeamA_total = TeamA_C3 + TeamA_NC3 + TeamA_2PT
+ #Verifying total shots for each is 280
+TeamA_total = TeamA_C3 + TeamA_NC3 + TeamA_2PT 
 TeamB_total = TeamB_C3 + TeamB_NC3 + TeamB_2PT
 
+#verifying total field goals made, checked using google sheets
 TeamA_TFGM = TeamA_NC3M + TeamA_2PTM + TeamA_C3M
 TeamB_TFGM = TeamB_NC3M + TeamB_2PTM + TeamB_C3M
 
@@ -103,7 +105,7 @@ TeamB_C3_efg = ((1.5*TeamB_C3M)/TeamB_C3)*100
 TeamB_NC3_efg = ((1.5*TeamB_NC3M)/TeamB_NC3)*100
 TeamB_2PT_efg = ((TeamB_2PTM)/TeamB_2PT)*100
 
-
+#Printing findings
 print("Shot Distribution: ")
 print("Team A: ")
 print("Corner Threes: " + str((TeamA_C3/TeamA_total)*100) + "%")
